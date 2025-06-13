@@ -61,10 +61,21 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # Rails integration for factory_bot, a replacement for fixtures
+  gem "factory_bot_rails"
+
+  # For auto-generating demo data
+  gem "faker"
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  # Rails integration for factory_bot, a replacement for fixtures
+  gem "factory_bot_rails"
+
+  # For auto-generating demo data
+  gem "faker"
 end
 
 gem "react-rails", "~> 2.7.1"
