@@ -22,8 +22,8 @@ const Create = ({ history }) => {
       // history.push("/dashboard");
       history.push("/");
     } catch (error) {
-      logger.error(error);
       setLoading(false);
+      logger.error(error);
     }
   };
 
