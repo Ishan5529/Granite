@@ -76,6 +76,7 @@ group :test do
 
   # For auto-generating demo data
   gem "faker"
+  gem "minitest-bisect"
 end
 
 gem "react-rails", "~> 2.7.1"
