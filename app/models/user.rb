@@ -5,11 +5,11 @@ class User < ApplicationRecord
   MIN_PASSWORD_LENGTH = 6
   VALID_EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   MAX_EMAIL_LENGTH = 255
+
   has_many :created_tasks, foreign_key: :task_owner_id, class_name: "Task"
   has_many :assigned_tasks, foreign_key: :assigned_user_id, class_name: "Task"
   has_many :comments, dependent: :destroy
-  has_secure_password
-  has_secure_token :authentication_token
+
   validates :name, presence: true, length: { maximum: MAX_NAME_LENGTH }
   validates :password, length: { minimum: MIN_PASSWORD_LENGTH }, if: -> { password.present? }
   validates :password_confirmation, presence: true, on: :create
@@ -17,6 +17,10 @@ class User < ApplicationRecord
     uniqueness: { case_sensitive: false },
     length: { maximum: MAX_EMAIL_LENGTH },
     format: { with: VALID_EMAIL_REGEX }
+
+  has_secure_password
+  has_secure_token :authentication_token
+
   before_save :to_lowercase
   before_destroy :assign_tasks_to_task_owners
 
