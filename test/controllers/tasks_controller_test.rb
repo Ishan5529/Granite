@@ -107,13 +107,4 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
     assert_response :not_found
     assert_equal I18n.t("task.not_found"), response.parsed_body["error"]
   end
-
-  def headers(user, options = {})
-    {
-      Accept: "application/json",
-      "Content_Type" => "application/json",
-      "X-Auth-Token" => user.authentication_token,
-      "X-Auth-Email" => user.email
-    }.merge(options)
-  end
 end
