@@ -23,6 +23,7 @@
     ]
   },
   "name": "app",
+  "type": "module",
   "private": true,
   "devDependencies": {
     "@babel/eslint-parser": "7.17.0",
