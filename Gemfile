@@ -85,5 +85,7 @@ gem "simplecov", require: false, group: :test
 
 gem "pundit"
 
-gem "redis", "~> 4.8"
-gem "sidekiq", "~> 6.0"
+gem "redis", "~> 5.0"
+gem "sidekiq", "~> 7.0"
+# gem "redis", "~> 4.8"
+# gem "sidekiq", "~> 6.0"
