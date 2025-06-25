@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
       render_error("Couldn't find #{exception.model}", :not_found)
 
     when ActiveRecord::RecordNotUnique
-      render_error(exception.message)
+      render_error(t("not_found", entity: exception.model), :not_found)
 
     when ActiveModel::ValidationError, ActiveRecord::RecordInvalid, ArgumentError
       error_message = exception.message.gsub("Validation failed: ", "")
