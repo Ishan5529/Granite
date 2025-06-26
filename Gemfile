@@ -7,7 +7,8 @@ ruby "3.3.5"
 gem "responders"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.3", ">= 7.1.3.4"
+# gem "rails", "~> 7.1.3", ">= 7.1.3.4"
+gem "rails", "7.1.3.4"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
