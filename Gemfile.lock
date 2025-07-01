@@ -117,6 +117,9 @@ GEM
     cronex (0.15.0)
       tzinfo
       unicode (>= 0.4.4.5)
+    data_migrate (11.3.0)
+      activerecord (>= 6.1)
+      railties (>= 6.1)
     date (3.4.1)
     debug (1.10.0)
       irb (~> 1.10)
@@ -450,6 +453,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.13)
   bootsnap
+  data_migrate
   debug
   dotenv-rails
   erb_lint!
