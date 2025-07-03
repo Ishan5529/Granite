@@ -27,7 +27,7 @@ module Granite
     # config.eager_load_paths << Rails.root.join("extras")
 
     # Load dotenv file
-    Dotenv::Railtie.load
+    Dotenv::Rails.load
     config.active_job.queue_adapter = :sidekiq
 
     config.generators do |g|
