@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+
+class HealthChecksController < ApplicationController
+  skip_before_action :authenticate_user!
+
+  def index
+    render json: { status: 'ok', message: 'Application is alive' }, status: :ok
+  end
+end
